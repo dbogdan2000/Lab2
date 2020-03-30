@@ -10,7 +10,7 @@
 
 2.Свёрточная нейронная сеть с двумя слоями Conv2D(filters=64, kernel_size=3), одним слоем Conv2D(filters=128, kernel_size=3), lr = 1*10^(-9), epoch=80;
  График метрики точности:
-  ![Image alt]()
+  ![Image alt](https://github.com/dbogdan2000/Lab2/blob/master/Acc2.png)
 
  График функции потерь:
-  ![Image alt]()
+  ![Image alt](https://github.com/dbogdan2000/Lab2/blob/master/loss2.png)
