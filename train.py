@@ -16,7 +16,7 @@ from tensorflow.python.keras.callbacks import LearningRateScheduler
 
 LOG_DIR = 'logs'
 SHUFFLE_BUFFER = 10
-BATCH_SIZE = 4
+BATCH_SIZE = 2
 NUM_CLASSES = 2
 PARALLEL_CALLS=4
 RESIZE_TO = 224
@@ -88,11 +88,9 @@ class Validation(tf.keras.callbacks.Callback):
 def build_model():
     return tf.keras.models.Sequential([
         tf.keras.layers.Input(shape=(224,224,3)),
-        tf.keras.layers.Conv2D(filters=64, kernel_size=3),
+        tf.keras.layers.Conv2D(filters=32, kernel_size=3),
         tf.keras.layers.MaxPool2D(),
-        tf.keras.layers.Conv2D(filters=64, kernel_size=3),
-        tf.keras.layers.MaxPool2D(),
-	tf.keras.layers.Conv2D(filters=128, kernel_size=3),
+        tf.keras.layers.Conv2D(filters=32, kernel_size=3),
         tf.keras.layers.MaxPool2D(),
         tf.keras.layers.Flatten(),
         tf.keras.layers.Dense(NUM_CLASSES, activation=tf.keras.activations.softmax)
@@ -121,7 +119,7 @@ def main():
     log_dir='{}/xray-{}'.format(LOG_DIR, time.time())
     model.fit(
         (train_images, train_labels),
-        epochs=80,
+        epochs=100,
         steps_per_epoch=int(np.ceil(TRAINSET_SIZE / float(BATCH_SIZE))),
         callbacks=[
             tf.keras.callbacks.TensorBoard(log_dir),
