@@ -22,6 +22,7 @@
   ![Image alt](https://github.com/dbogdan2000/Lab2/blob/master/Val_acc:%20Batch%20%3D%202%2C%202%20Conv2D64:64%2C3:3%20epoch%20%3D%20120%20.png)
 
  Графики функции потерь:
+
   ![Image alt](https://github.com/dbogdan2000/Lab2/blob/master/Loss:%20Batch%20%3D%202%2C%202%20Conv2D64:64%2C3:3%20epoch%20%3D%20120%20.png)
 
   ![Image alt](https://github.com/dbogdan2000/Lab2/blob/master/Val_loss:%20Batch%20%3D%202%2C%202%20Conv2D64:64%2C3:3%3B%20epoch%20%3D%20120%20.png)
